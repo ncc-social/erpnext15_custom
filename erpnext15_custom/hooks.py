@@ -39,7 +39,11 @@ fixtures = [
                 "type",
                 "event_status",
                 "subject",
-                "condition"
+                "condition",
+                "additional_mobile_number",
+                "assumption_of_duty",
+                "appointment_date",
+                "acceptance_date"
 
             ]
         ]
@@ -65,7 +69,7 @@ fixtures = [
     {"dt": "Print Format", "filters": [
         [
             "doc_type", "in", [
-                "Leave Application  "
+                "Leave Application"
             ]
         ]
     ]}
