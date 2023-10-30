@@ -6,6 +6,71 @@ app_email = "social@ncc.gov.gh"
 app_license = "mit"
 # required_apps = []
 
+fixtures = [
+    {"dt": "Property Setter", "filters": [
+        [
+            "doc_type", "in", [
+                "Employee",
+                "Leave Application",
+                "Leave Type",
+                "Training Event",
+                "Vehicle",
+                "Notification",
+                "Notification Recipient",
+                "Print Format",
+                "Issue",
+                "User"
+            ]
+        ]
+    ]},
+    {"dt": "Custom Field", "filters": [
+        [
+            "fieldname", "in", [
+                "ghanacard_details_section",
+                "personal_id_number",
+                "document_number",
+                "ghanacard_date_of_issuance",
+                "ghanacard_date_of_expiry",
+                "age",
+                "year_of_manufacture",
+                "vehicle_type",
+                "department",
+                "tyre_type",
+                "type",
+                "event_status",
+                "subject",
+                "condition"
+
+            ]
+        ]
+    ]},
+    {"dt": "Client Script", "filters": [
+        [
+            "name", "in", [
+                "Employee-Form",
+                "Vehicle-Form",
+                "Leave Application-Form",
+                "Leave Application-List",
+                "Send SMS for Leave Application"
+            ]
+        ]
+    ]},
+    {"dt": "Server Script", "filters": [
+        [
+            "name", "in", [
+                
+            ]
+        ]
+    ]},
+    {"dt": "Print Format", "filters": [
+        [
+            "doc_type", "in", [
+                "Leave Application  "
+            ]
+        ]
+    ]}
+]
+
 # Includes in <head>
 # ------------------
 

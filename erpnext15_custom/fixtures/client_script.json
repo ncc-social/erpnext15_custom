@@ -1,0 +1,57 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Employee",
+  "enabled": 1,
+  "modified": "2023-10-30 10:51:07.085762",
+  "module": "Erpnext15 Custom",
+  "name": "Employee-Form",
+  "script": "frappe.ui.form.on(\"Employee\", {\n\trefresh(frm) {\n\t\tlet duration = moment.duration(moment().diff(cur_frm.doc.date_of_birth));\n        const formatDuration = (duration) => {\n            let years = duration.years();\n            let months= duration.months();\n            let days= duration.days();\n            let result = '';\n            if (years === 1) {\n                result += '1 year ';\n            } else if (years > 1) {\n                result += years + ' years ';\n            }\n            if (months === 1) {\n                result += '1 month ';\n            } else if (months > 1) {\n                result += months + ' months ';\n            }\n            if (days === 1) {\n                result += '1 day ';\n            } else if (days > 1) {\n                result += days + ' days ';\n            }\n            return result;\n        }\n        \n        cur_frm.set_value(\"age\", formatDuration(duration));\n        cur_frm.add_fetch('reports_to',  'employee_name',  'reports_to_name');\n        \n\t}\n\n})",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Vehicle",
+  "enabled": 1,
+  "modified": "2023-10-30 10:52:29.699334",
+  "module": "Erpnext15 Custom",
+  "name": "Vehicle-Form",
+  "script": "frappe.ui.form.on('Vehicle', {\n\trefresh(frm) {\n\t\tcur_frm.add_fetch('employee', 'employee_name', 'employee_name');\n\t}\n})",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Leave Application",
+  "enabled": 1,
+  "modified": "2023-10-30 10:53:06.602750",
+  "module": "Erpnext15 Custom",
+  "name": "Leave Application-List",
+  "script": "frappe.listview_settings['Leave Application'] = frappe.listview_settings['Leave Application'] || {};\nfrappe.listview_settings['Leave Application'] = {\n    // add fields to fetch\n    add_fields: ['employee_name', 'leave_type', 'from_date', 'to_date', 'status'],\n    \n    hide_name_column: true, // hide the last column which shows the `name`\n    \n    // add a custom button for each row\n    button: {\n        show(doc) {\n            return doc.docstatus == 1;\n        },\n        get_label() {\n            return 'View';\n        },\n        get_description(doc) {\n            //return __('View {0}', [`${doc.name}`])\n            return __('View Details')\n        },\n        action(doc) {\n            frappe.set_route('Form', 'Leave Application', doc.name);\n        }\n    }\n}",
+  "view": "List"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Leave Application",
+  "enabled": 0,
+  "modified": "2023-10-30 10:53:57.988278",
+  "module": "Erpnext15 Custom",
+  "name": "Leave Application-Form",
+  "script": "cur_frm.add_fetch('employee',  'branch',  'branch');\nfrappe.ui.form.on(\"Leave Application\", {\n\tmake_dashboard: function(frm) {\n\t\tvar leave_details;\n\t\tlet lwps;\n\t\tif ( frm.doc.employee ) {\n\t\t\tfrappe.call({\n\t\t\t\tmethod: \"hrms.hr.doctype.leave_application.leave_application.get_leave_details\",\n\t\t\t\tasync: false,\n\t\t\t\targs: {\n\t\t\t\t\temployee: frm.doc.employee,\n\t\t\t\t\tdate: frm.doc.from_date || frm.doc.posting_date\n\t\t\t\t},\n\t\t\t\tcallback: function(r) {\n\t\t\t\t\tif (!r.exc && r.message['leave_allocation']) {\n\t\t\t\t\t\tleave_details = r.message['leave_allocation'];\n\t\t\t\t\t}\n\t\t\t\t\tif (!r.exc && r.message['leave_approver']) {\n\t\t\t\t\t\tfrm.set_value('leave_approver', r.message['leave_approver']);\n\t\t\t\t\t}\n\t\t\t\t\tlwps = r.message[\"lwps\"];\n\t\t\t\t}\n\t\t\t});\n\t\t\t$(\"div\").remove(\".form-dashboard-section.custom\");\n\t\t\tfrm.dashboard.add_section(\n\t\t\t\tfrappe.render_template('leave_application_dashboard', {\n\t\t\t\t\tdata: leave_details\n\t\t\t\t}),\n\t\t\t\t__(\"Allocated Leaves\")\n\t\t\t);\n\t\t\tfrm.dashboard.show();\n\t\t\tlet allowed_leave_types = Object.keys(leave_details);\n\n\t\t\t// lwps should be allowed, lwps don't have any allocation\n\t\t\tallowed_leave_types = allowed_leave_types.concat(lwps);\n\n\t\t\tfrm.set_query('leave_type', function() {\n\t\t\t\treturn {\n\t\t\t\t\tfilters: [\n\t\t\t\t\t\t['leave_type_name', 'in', allowed_leave_types]\n\t\t\t\t\t]\n\t\t\t\t};\n\t\t\t});\n\t\t}\n\t}\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Leave Application",
+  "enabled": 0,
+  "modified": "2023-10-30 10:55:22.265658",
+  "module": "Erpnext15 Custom",
+  "name": "Send SMS for Leave Application",
+  "script": "frappe.ui.form.on(\"Leave Application\", \"on_submit\", function(frm, cdt, cdn) {\n\tvar message = \"\";\n\tif (frm.doc.workflow_state == \"Leave REJECTED\") {\n\t\tmessage = 'Your leave application for ' + frm.doc.total_leave_days + ' days has been REJECTED';\n\t} else if (frm.doc.workflow_state == \"Leave APPROVED\") {\n\t\tmessage = 'Your leave application for ' + frm.doc.total_leave_days + ' days has been APPROVED';\n\t}\n\tfrappe.call({\n\t\tmethod: \"frappe.core.doctype.sms_settings.sms_settings.send_sms\",\n\t\targs: {\n\t\t\treceiver_list: [frm.doc.cell_number],\n\t\t\tmsg: message,\n\t\t},\n\t\tcallback: function(r) {\n\t\t\tif (r.exc) {\n\t\t\t\tmsgprint(r.exc);\n\t\t\t\treturn;\n\t\t\t}\n\t\t}\n\t});\n})",
+  "view": "Form"
+ }
+]
