@@ -59,7 +59,8 @@ fixtures = [
                 "Vehicle-Form",
                 "Leave Application-Form",
                 "Leave Application-List",
-                "Send SMS for Leave Application"
+                "Send SMS for Leave Application",
+                "Employee Folio Number"
             ]
         ]
     ]},
