@@ -77,6 +77,13 @@ fixtures = [
                 "Leave Application"
             ]
         ]
+    ]},
+    {"dt": "Workspace", "filters": [
+        [
+            "module", "in", [
+                "Erpnext15 Custom"
+            ]
+        ]
     ]}
 ]
 

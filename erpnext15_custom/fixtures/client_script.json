@@ -53,5 +53,16 @@
   "name": "Send SMS for Leave Application",
   "script": "frappe.ui.form.on(\"Leave Application\", \"on_submit\", function(frm, cdt, cdn) {\n\tvar message = \"\";\n\tif (frm.doc.workflow_state == \"Leave REJECTED\") {\n\t\tmessage = 'Your leave application for ' + frm.doc.total_leave_days + ' days has been REJECTED';\n\t} else if (frm.doc.workflow_state == \"Leave APPROVED\") {\n\t\tmessage = 'Your leave application for ' + frm.doc.total_leave_days + ' days has been APPROVED';\n\t}\n\tfrappe.call({\n\t\tmethod: \"frappe.core.doctype.sms_settings.sms_settings.send_sms\",\n\t\targs: {\n\t\t\treceiver_list: [frm.doc.cell_number],\n\t\t\tmsg: message,\n\t\t},\n\t\tcallback: function(r) {\n\t\t\tif (r.exc) {\n\t\t\t\tmsgprint(r.exc);\n\t\t\t\treturn;\n\t\t\t}\n\t\t}\n\t});\n})",
   "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Employee",
+  "enabled": 1,
+  "modified": "2023-11-07 15:41:11.571532",
+  "module": "Erpnext15 Custom",
+  "name": "Employee Folio Number",
+  "script": "frappe.ui.form.on('Employee', {\n\trefresh: function(frm) {\n\t\tvar text = frm.doc.employee_number;\n\n        // Use a regular expression to extract \"JD\" or \"SD\" followed by numbers and \"/\"\n        var match = text.match(/(JD|SD)(\\d+)\\/(\\d+)/);\n\n        if (match) {\n            var extractedValue = match[1] + match[3];\n            frm.set_value('folio_number', extractedValue);\n        } else {\n            console.log(\"Pattern not found.\");\n        }\n\t}\n})",
+  "view": "Form"
  }
 ]
