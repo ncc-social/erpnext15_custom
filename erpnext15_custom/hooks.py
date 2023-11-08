@@ -41,7 +41,6 @@ fixtures = [
                 "subject",
                 "condition",
                 "additional_mobile_number",
-                "assumption_of_duty",
                 "appointment_date",
                 "acceptance_date",
                 "staff_id",
