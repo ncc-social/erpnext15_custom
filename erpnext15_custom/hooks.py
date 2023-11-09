@@ -46,7 +46,7 @@ fixtures = [
                 "staff_id",
                 "branch",
                 "leave_type",
-                "folio_number"
+                "custom_folio_number"
 
             ]
         ]

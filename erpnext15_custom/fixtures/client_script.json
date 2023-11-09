@@ -59,10 +59,10 @@
   "doctype": "Client Script",
   "dt": "Employee",
   "enabled": 1,
-  "modified": "2023-11-07 15:41:11.571532",
+  "modified": "2023-11-09 13:22:31.432798",
   "module": "Erpnext15 Custom",
   "name": "Employee Folio Number",
-  "script": "frappe.ui.form.on('Employee', {\n\trefresh: function(frm) {\n\t\tvar text = frm.doc.employee_number;\n\n        // Use a regular expression to extract \"JD\" or \"SD\" followed by numbers and \"/\"\n        var match = text.match(/(JD|SD)(\\d+)\\/(\\d+)/);\n\n        if (match) {\n            var extractedValue = match[1] + match[3];\n            frm.set_value('folio_number', extractedValue);\n        } else {\n            console.log(\"Pattern not found.\");\n        }\n\t}\n})",
+  "script": "frappe.ui.form.on('Employee', {\n\trefresh: function(frm) {\n\t\tvar text = frm.doc.employee_number;\n\n        // Use a regular expression to extract \"JD\" or \"SD\" followed by numbers and \"/\"\n        var match = text.match(/(JD|SD)(\\d+)\\/(\\d+)/);\n\n        if (match) {\n            var extractedValue = match[1] + match[3];\n            frm.set_value('custom_folio_number', extractedValue);\n        } else {\n            console.log(\"Pattern not found.\");\n        }\n\t}\n})",
   "view": "Form"
  }
 ]
