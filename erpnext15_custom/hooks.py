@@ -202,24 +202,27 @@ fixtures = [
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
+doc_events = {
 #	"*": {
 #		"on_update": "method",
 #		"on_cancel": "method",
 #		"on_trash": "method"
 #	}
-# }
+    "Leave Application": {
+		"on_submit": "erpnext15_custom.my_scripts.leave_application.after_approval"
+	}
+}
 
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
 #	"all": [
 #		"erpnext15_custom.tasks.all"
 #	],
-#	"daily": [
-#		"erpnext15_custom.tasks.daily"
-#	],
+	"daily": [
+		"erpnext15_custom.my_scripts.birthday_reminder.send_birthday_reminders"
+	],
 #	"hourly": [
 #		"erpnext15_custom.tasks.hourly"
 #	],
@@ -229,7 +232,7 @@ fixtures = [
 #	"monthly": [
 #		"erpnext15_custom.tasks.monthly"
 #	],
-# }
+}
 
 # Testing
 # -------
