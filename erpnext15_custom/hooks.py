@@ -202,16 +202,17 @@ fixtures = [
 # ---------------
 # Hook on document methods and events
 
-doc_events = {
+#doc_events = {
 #	"*": {
 #		"on_update": "method",
 #		"on_cancel": "method",
 #		"on_trash": "method"
 #	}
-    "Leave Application": {
-		"on_submit": "erpnext15_custom.my_scripts.leave_application.after_approval"
-	}
-}
+    # "Leave Application": {
+	# 	"on_submit": "erpnext15_custom.my_scripts.leave_application.on_submit",
+	# 	"on_cancel": "erpnext15_custom.my_scripts.leave_application.on_cancel",
+	# }
+#}
 
 # Scheduled Tasks
 # ---------------
