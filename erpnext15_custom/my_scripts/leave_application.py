@@ -2,7 +2,7 @@
 import frappe
 from frappe import _
 from frappe.utils import (
-	formatdate,
+	formatdate
 )
 
 def on_submit(self):

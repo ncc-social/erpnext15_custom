@@ -1,0 +1,80 @@
+[
+ {
+  "add_total_row": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "NACOC Official Letter Head",
+  "modified": "2023-11-26 11:13:09.280697",
+  "module": "Erpnext15 Custom",
+  "name": "Employee on Leave this week",
+  "prepared_report": 0,
+  "query": "SELECT \n    UPPER(employee_name) as \"Employee:Data:300\",\n    CASE \n        WHEN leave_type IN ('Annual Leave - JD', 'Annual Leave - SD') THEN 'Annual Leave'\n        ELSE leave_type\n    END as \"Leave Type:Data:150\",\n    from_date as \"Start Date:Date:120\",\n    to_date as \"End Date:Date:120\",\n    workflow_state as \"Status:Data:180\"\nFROM \n    `tabLeave Application`\nWHERE \n    workflow_state = \"Leave APPROVED\"\n    AND from_date <= CURDATE() + INTERVAL 6-DAYOFWEEK(CURDATE()) DAY\n    AND to_date >= CURDATE() - INTERVAL DAYOFWEEK(CURDATE())-2 DAY\nORDER BY from_date",
+  "ref_doctype": "Leave Application",
+  "reference_report": null,
+  "report_name": "Employee on Leave this week",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "Employee on Leave this week",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR User"
+   },
+   {
+    "parent": "Employee on Leave this week",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR Manager"
+   },
+   {
+    "parent": "Employee on Leave this week",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Leave Approver"
+   },
+   {
+    "parent": "Employee on Leave this week",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Employee"
+   },
+   {
+    "parent": "Employee on Leave this week",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "NACOC User"
+   },
+   {
+    "parent": "Employee on Leave this week",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "NACOC User"
+   },
+   {
+    "parent": "Employee on Leave this week",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Precursor Officer"
+   },
+   {
+    "parent": "Employee on Leave this week",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Director-Enforcement"
+   },
+   {
+    "parent": "Employee on Leave this week",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "DG"
+   }
+  ]
+ }
+]

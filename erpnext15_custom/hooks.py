@@ -46,7 +46,8 @@ fixtures = [
                 "staff_id",
                 "branch",
                 "leave_type",
-                "custom_folio_number"
+                "custom_folio_number",
+                "rejection_reason"
 
             ]
         ]
@@ -81,6 +82,13 @@ fixtures = [
         [
             "module", "in", [
                 "Erpnext15 Custom"
+            ]
+        ]
+    ]},
+    {"dt": "Report", "filters": [
+        [
+            "ref_doctype", "in", [
+                "Leave Application"
             ]
         ]
     ]}
