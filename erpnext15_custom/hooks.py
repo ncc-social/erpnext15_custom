@@ -25,49 +25,34 @@ fixtures = [
     ]},
     {"dt": "Custom Field", "filters": [
         [
-            "fieldname", "in", [
-                "ghanacard_details_section",
-                "personal_id_number",
-                "document_number",
-                "ghanacard_date_of_issuance",
-                "ghanacard_date_of_expiry",
-                "age",
-                "year_of_manufacture",
-                "vehicle_type",
-                "department",
-                "tyre_type",
-                "type",
-                "event_status",
-                "subject",
-                "condition",
-                "additional_mobile_number",
-                "appointment_date",
-                "acceptance_date",
-                "staff_id",
-                "branch",
-                "leave_type",
-                "custom_folio_number",
-                "rejection_reason"
+            "dt", "in", [
+                "Leave Application",
+                "Vehicle",
+                "Employee",
+                "Notification"
 
+            ]
+        ]
+    ]},
+    {"dt": "Notification", "filters": [
+        [
+            "document_type", "in", [
+                "Leave Application"
             ]
         ]
     ]},
     {"dt": "Client Script", "filters": [
         [
-            "name", "in", [
-                "Employee-Form",
-                "Vehicle-Form",
-                "Leave Application-Form",
-                "Leave Application-List",
-                "Send SMS for Leave Application",
-                "Employee Folio Number"
+            "dt", "in", [
+                "Employee",
+                "Leave Application"
             ]
         ]
     ]},
-    {"dt": "Server Script", "filters": [
+    {"dt": "Workflow", "filters": [
         [
-            "name", "in", [
-                
+            "document_type", "in", [
+                "Leave Application"
             ]
         ]
     ]},
