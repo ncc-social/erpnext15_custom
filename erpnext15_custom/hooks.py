@@ -19,7 +19,8 @@ fixtures = [
                 "Notification Recipient",
                 "Print Format",
                 "Issue",
-                "User"
+                "User",
+                "Report"
             ]
         ]
     ]},
@@ -29,7 +30,9 @@ fixtures = [
                 "Leave Application",
                 "Vehicle",
                 "Employee",
-                "Notification"
+                "Notification",
+                "Report",
+                "Training Event"
 
             ]
         ]
@@ -73,7 +76,8 @@ fixtures = [
     {"dt": "Report", "filters": [
         [
             "ref_doctype", "in", [
-                "Leave Application"
+                "Leave Application",
+                "Employee"
             ]
         ]
     ]}

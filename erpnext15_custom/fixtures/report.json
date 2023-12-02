@@ -9,8 +9,8 @@
   "is_standard": "No",
   "javascript": null,
   "json": null,
-  "letter_head": "NACOC Official Letter Head",
-  "modified": "2023-11-26 11:13:09.280697",
+  "letter_head": "",
+  "modified": "2023-11-29 21:57:02.908133",
   "module": "Erpnext15 Custom",
   "name": "Employee on Leave this week",
   "prepared_report": 0,
@@ -165,6 +165,198 @@
     "parentfield": "roles",
     "parenttype": "Report",
     "role": "DG"
+   }
+  ]
+ },
+ {
+  "add_total_row": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "Yes",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2023-11-30 18:33:17.410541",
+  "module": "HR",
+  "name": "Employee Leave Balance",
+  "prepared_report": 1,
+  "query": null,
+  "ref_doctype": "Employee",
+  "reference_report": null,
+  "report_name": "Employee Leave Balance",
+  "report_script": null,
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "parent": "Employee Leave Balance",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR User"
+   },
+   {
+    "parent": "Employee Leave Balance",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR Manager"
+   },
+   {
+    "parent": "Employee Leave Balance",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Leave Approver"
+   }
+  ]
+ },
+ {
+  "add_total_row": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "Yes",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2023-11-30 18:32:58.837807",
+  "module": "HR",
+  "name": "Employee Leave Balance Summary",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Employee",
+  "reference_report": null,
+  "report_name": "Employee Leave Balance Summary",
+  "report_script": null,
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "parent": "Employee Leave Balance Summary",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR Manager"
+   },
+   {
+    "parent": "Employee Leave Balance Summary",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR User"
+   },
+   {
+    "parent": "Employee Leave Balance Summary",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Leave Approver"
+   }
+  ]
+ },
+ {
+  "add_total_row": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "Yes",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2023-11-25 17:05:33.052289",
+  "module": "HR",
+  "name": "Employee Analytics",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Employee",
+  "reference_report": null,
+  "report_name": "Employee Analytics",
+  "report_script": null,
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "parent": "Employee Analytics",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR User"
+   },
+   {
+    "parent": "Employee Analytics",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR Manager"
+   }
+  ]
+ },
+ {
+  "add_total_row": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "Yes",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2023-11-30 18:31:28.614913",
+  "module": "HR",
+  "name": "Employee Birthday",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Employee",
+  "reference_report": null,
+  "report_name": "Employee Birthday",
+  "report_script": null,
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "parent": "Employee Birthday",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR User"
+   },
+   {
+    "parent": "Employee Birthday",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR Manager"
+   }
+  ]
+ },
+ {
+  "add_total_row": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "Yes",
+  "javascript": null,
+  "json": "{\"add_total_row\": 0, \"sort_by\": \"Employee.bank_ac_no\", \"sort_order\": \"desc\", \"sort_by_next\": \"\", \"filters\": [], \"sort_order_next\": \"desc\", \"columns\": [[\"name\", \"Employee\"], [\"employee_number\", \"Employee\"], [\"date_of_joining\", \"Employee\"], [\"branch\", \"Employee\"], [\"department\", \"Employee\"], [\"designation\", \"Employee\"], [\"gender\", \"Employee\"], [\"status\", \"Employee\"], [\"company\", \"Employee\"], [\"employment_type\", \"Employee\"], [\"reports_to\", \"Employee\"], [\"company_email\", \"Employee\"]]}",
+  "letter_head": null,
+  "modified": "2017-02-24 20:01:38.681441",
+  "module": "HR",
+  "name": "Employee Information",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Employee",
+  "reference_report": null,
+  "report_name": "Employee Information",
+  "report_script": null,
+  "report_type": "Report Builder",
+  "roles": [
+   {
+    "parent": "Employee Information",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR User"
+   },
+   {
+    "parent": "Employee Information",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR Manager"
    }
   ]
  }

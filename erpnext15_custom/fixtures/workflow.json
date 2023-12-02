@@ -4,7 +4,7 @@
   "doctype": "Workflow",
   "document_type": "Leave Application",
   "is_active": 1,
-  "modified": "2023-11-26 19:59:55.077000",
+  "modified": "2023-11-30 18:21:53.326405",
   "name": "Leave Application Workflow",
   "override_status": 0,
   "send_email_alert": 0,
@@ -35,6 +35,21 @@
     "parentfield": "states",
     "parenttype": "Workflow",
     "state": "Sent to Head for Approval",
+    "update_field": null,
+    "update_value": null,
+    "workflow_builder_id": null
+   },
+   {
+    "allow_edit": "HR User",
+    "avoid_status_override": 0,
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Leave Application Workflow",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Sent to HR for Review",
     "update_field": null,
     "update_value": null,
     "workflow_builder_id": null
@@ -145,6 +160,18 @@
    },
    {
     "action": "Submit Application",
+    "allow_self_approval": 0,
+    "allowed": "Employee",
+    "condition": "doc.leave_type == \"Sick Leave\"",
+    "next_state": "Sent to HR for Review",
+    "parent": "Leave Application Workflow",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Draft",
+    "workflow_builder_id": null
+   },
+   {
+    "action": "Submit Application",
     "allow_self_approval": 1,
     "allowed": "Employee",
     "condition": "doc.leave_approver_name in (\"Kenneth Adu-Amanfoh\")",
@@ -168,7 +195,7 @@
     "workflow_builder_id": null
    },
    {
-    "action": "Refuse",
+    "action": "Reject",
     "allow_self_approval": 1,
     "allowed": "Leave Approver",
     "condition": null,
@@ -192,7 +219,7 @@
     "workflow_builder_id": null
    },
    {
-    "action": "Refuse",
+    "action": "Reject",
     "allow_self_approval": 1,
     "allowed": "Leave Approver",
     "condition": "doc.branch == \"Headquarters\"",
@@ -216,7 +243,7 @@
     "workflow_builder_id": null
    },
    {
-    "action": "Refuse",
+    "action": "Reject",
     "allow_self_approval": 1,
     "allowed": "Leave Approver",
     "condition": "doc.leave_approver_name in (\"Macdonald Dei\", \"Hazel Juddy Mensah\", \"Solomon Stanley Eyo\", \"Charles Akrofi\", \"Francis Opoku Amoah\", \"Sylvester Koomson\")",
@@ -225,6 +252,30 @@
     "parentfield": "transitions",
     "parenttype": "Workflow",
     "state": "Sent to Head for Approval",
+    "workflow_builder_id": null
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "HR User",
+    "condition": null,
+    "next_state": "Leave APPROVED",
+    "parent": "Leave Application Workflow",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Sent to HR for Review",
+    "workflow_builder_id": null
+   },
+   {
+    "action": "Reject",
+    "allow_self_approval": 1,
+    "allowed": "HR User",
+    "condition": null,
+    "next_state": "Leave REJECTED",
+    "parent": "Leave Application Workflow",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Sent to HR for Review",
     "workflow_builder_id": null
    },
    {
@@ -240,7 +291,7 @@
     "workflow_builder_id": null
    },
    {
-    "action": "Refuse",
+    "action": "Reject",
     "allow_self_approval": 1,
     "allowed": "DG",
     "condition": "doc.leave_approver_name == \"Micheal Addo\"",
@@ -336,7 +387,7 @@
     "workflow_builder_id": null
    },
    {
-    "action": "Refuse",
+    "action": "Reject",
     "allow_self_approval": 1,
     "allowed": "Director-DDR",
     "condition": "doc.department in (\"Drug Education & Prevention Department - NACOC\", \"Treatment Department - NACOC\", \"Alternative Livelihoods Development Department - NACOC\", \"Harm Reduction Department - NACOC\", \"Rehabilitation & Social Re-Integration Department - NACOC\")",
@@ -348,7 +399,7 @@
     "workflow_builder_id": null
    },
    {
-    "action": "Refuse",
+    "action": "Reject",
     "allow_self_approval": 1,
     "allowed": "Director-Intel",
     "condition": "doc.department in (\"Forensic Science Department - NACOC\", \"Assets Recovery & Management Department - NACOC\", \"Intelligence Department - NACOC\", \"Investigations Department - NACOC\")",
@@ -360,7 +411,7 @@
     "workflow_builder_id": null
    },
    {
-    "action": "Refuse",
+    "action": "Reject",
     "allow_self_approval": 1,
     "allowed": "Director-Enforcement",
     "condition": "doc.department in (\"Courier Operations - NACOC\", \"Airport Operations - NACOC\", \"Tactical Deployment Department - NACOC\", \"Maritime Operations - NACOC\", \"Canine Operations - NACOC\", \"Regions - NACOC\", \"Utility Agents - NACOC\", \"Sensitive Investigations - NACOC\")",
@@ -372,7 +423,7 @@
     "workflow_builder_id": null
    },
    {
-    "action": "Refuse",
+    "action": "Reject",
     "allow_self_approval": 1,
     "allowed": "Director-HRA",
     "condition": "doc.department in (\"General Administration Department - NACOC\", \"Human Resource Management Department - NACOC\", \"Information & Communication Technology Department - NACOC\", \"Welfare Department - NACOC\", \"Project Management Office - NACOC\", \"General Services Department - NACOC\")",
@@ -384,7 +435,7 @@
     "workflow_builder_id": null
    },
    {
-    "action": "Refuse",
+    "action": "Reject",
     "allow_self_approval": 1,
     "allowed": "Director-PAIR",
     "condition": "doc.department in (\"Material Development - NACOC\", \"Client Services Department - NACOC\", \"Public Affairs Department - NACOC\", \"International Relations Department - NACOC\")",
@@ -396,7 +447,7 @@
     "workflow_builder_id": null
    },
    {
-    "action": "Refuse",
+    "action": "Reject",
     "allow_self_approval": 1,
     "allowed": "Director-Finance",
     "condition": "doc.department in (\"Accounts & Budget Department - NACOC\", \"Payroll Department - NACOC\")",
@@ -408,7 +459,7 @@
     "workflow_builder_id": null
    },
    {
-    "action": "Refuse",
+    "action": "Reject",
     "allow_self_approval": 1,
     "allowed": "Director-RPP",
     "condition": "doc.department in (\"Research & Reports - NACOC\", \"Professional Standards - NACOC\", \"Policy Implementation, Monitoring & Evaluation Department - NACOC\")",
@@ -432,7 +483,7 @@
     "workflow_builder_id": null
    },
    {
-    "action": "Refuse",
+    "action": "Reject",
     "allow_self_approval": 1,
     "allowed": "DDG",
     "condition": "",
@@ -456,7 +507,7 @@
     "workflow_builder_id": null
    },
    {
-    "action": "Refuse",
+    "action": "Reject",
     "allow_self_approval": 1,
     "allowed": "DG",
     "condition": "",
