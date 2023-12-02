@@ -20,7 +20,9 @@ fixtures = [
                 "Print Format",
                 "Issue",
                 "User",
-                "Report"
+                "Report",
+                "Workspace",
+                "Dashboard"
             ]
         ]
     ]},
