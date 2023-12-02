@@ -1,0 +1,173 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "question-sign",
+  "modified": "2023-09-24 16:14:00.660192",
+  "name": "Pending",
+  "style": "",
+  "workflow_state_name": "Pending"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "ok-sign",
+  "modified": "2023-09-24 16:14:00.661804",
+  "name": "Approved",
+  "style": "Success",
+  "workflow_state_name": "Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "remove",
+  "modified": "2023-09-24 16:14:00.663327",
+  "name": "Rejected",
+  "style": "Danger",
+  "workflow_state_name": "Rejected"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-10-28 16:42:17.177568",
+  "name": "Leave Application REJECTED",
+  "style": "",
+  "workflow_state_name": "Leave Application REJECTED"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-10-28 16:42:32.516161",
+  "name": "Leave Application APPROVED",
+  "style": "",
+  "workflow_state_name": "Leave Application APPROVED"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-10-28 16:43:52.630975",
+  "name": "Leave Applied",
+  "style": "",
+  "workflow_state_name": "Leave Applied"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-11-30 18:12:09.191445",
+  "name": "Sent to HR for Review",
+  "style": "",
+  "workflow_state_name": "Sent to HR for Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-10-28 16:42:00.562760",
+  "name": "Leave Approval pending by Deputy Director-General",
+  "style": "",
+  "workflow_state_name": "Leave Approval pending by Deputy Director-General"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-10-28 16:43:03.135595",
+  "name": "Leave Approval pending by Director-General",
+  "style": "",
+  "workflow_state_name": "Leave Approval pending by Director-General"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-11-03 15:04:35.705374",
+  "name": "Leave Approval pending by Supervisor",
+  "style": "",
+  "workflow_state_name": "Leave Approval pending by Supervisor"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-10-28 16:43:20.465283",
+  "name": "Leave Approval pending by Director",
+  "style": "",
+  "workflow_state_name": "Leave Approval pending by Director"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-10-28 16:39:44.883289",
+  "name": "Leave CANCELLED",
+  "style": "",
+  "workflow_state_name": "Leave CANCELLED"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-11-03 15:17:10.094295",
+  "name": "Sent to Deputy Director-General for Approval",
+  "style": "",
+  "workflow_state_name": "Sent to Deputy Director-General for Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-11-07 10:44:35.496916",
+  "name": "Draft",
+  "style": "Warning",
+  "workflow_state_name": "Draft"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-11-06 16:14:58.905289",
+  "name": "Sent to Director-General for Approval",
+  "style": "Warning",
+  "workflow_state_name": "Sent to Director-General for Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-11-07 10:43:55.969899",
+  "name": "Sent to Head for Approval",
+  "style": "Primary",
+  "workflow_state_name": "Sent to Head for Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-11-06 16:15:19.043862",
+  "name": "Leave APPROVED",
+  "style": "Success",
+  "workflow_state_name": "Leave APPROVED"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-11-06 16:15:31.408535",
+  "name": "Leave REJECTED",
+  "style": "Danger",
+  "workflow_state_name": "Leave REJECTED"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-11-07 10:43:34.253304",
+  "name": "Sent to Director for Approval",
+  "style": "Info",
+  "workflow_state_name": "Sent to Director for Approval"
+ }
+]

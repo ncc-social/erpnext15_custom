@@ -61,6 +61,7 @@ fixtures = [
             ]
         ]
     ]},
+    {"dt": "Workflow State"},
     {"dt": "Print Format", "filters": [
         [
             "doc_type", "in", [
