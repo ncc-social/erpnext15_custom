@@ -15,8 +15,8 @@ fixtures = [
                 "Leave Type",
                 "Training Event",
                 "Vehicle",
-                #"Notification",
-                #"Notification Recipient",
+                "Notification",
+                "Notification Recipient",
                 "Print Format",
                 "Issue",
                 "User",
@@ -39,13 +39,13 @@ fixtures = [
             ]
         ]
     ]},
-    # {"dt": "Notification", "filters": [
-    #     [
-    #         "document_type", "in", [
-    #             "Leave Application"
-    #         ]
-    #     ]
-    # ]},
+    {"dt": "Notification", "filters": [
+        [
+            "document_type", "in", [
+                "Leave Application"
+            ]
+        ]
+    ]},
     {"dt": "Client Script", "filters": [
         [
             "dt", "in", [
