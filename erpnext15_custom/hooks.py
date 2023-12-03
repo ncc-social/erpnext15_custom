@@ -16,7 +16,7 @@ fixtures = [
                 "Training Event",
                 "Vehicle",
                 "Notification",
-                "Notification Recipient",
+                #"Notification Recipient",
                 "Print Format",
                 "Issue",
                 "User",
