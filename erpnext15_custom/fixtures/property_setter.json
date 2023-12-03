@@ -487,12 +487,12 @@
   "doctype_or_field": "DocField",
   "field_name": "condition",
   "is_system_generated": 0,
-  "modified": "2023-12-03 05:43:02.583392",
+  "modified": "2023-12-03 05:52:35.626168",
   "module": null,
   "name": "Notification Recipient-condition-length",
   "property": "length",
   "property_type": "Int",
   "row_name": null,
-  "value": "300"
+  "value": "350"
  }
 ]
