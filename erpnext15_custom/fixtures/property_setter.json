@@ -353,22 +353,6 @@
  },
  {
   "default_value": null,
-  "doc_type": "Notification",
-  "docstatus": 0,
-  "doctype": "Property Setter",
-  "doctype_or_field": "DocField",
-  "field_name": "subject",
-  "is_system_generated": 0,
-  "modified": "2023-11-29 16:56:42.508463",
-  "module": null,
-  "name": "Notification-subject-length",
-  "property": "length",
-  "property_type": "Int",
-  "row_name": null,
-  "value": "500"
- },
- {
-  "default_value": null,
   "doc_type": "Leave Type",
   "docstatus": 0,
   "doctype": "Property Setter",
