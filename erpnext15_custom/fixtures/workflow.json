@@ -4,7 +4,7 @@
   "doctype": "Workflow",
   "document_type": "Leave Application",
   "is_active": 1,
-  "modified": "2023-12-12 10:14:56.543808",
+  "modified": "2023-12-12 20:00:38.961168",
   "name": "Leave Application Workflow",
   "override_status": 0,
   "send_email_alert": 0,
@@ -233,9 +233,9 @@
    {
     "action": "Approve",
     "allow_self_approval": 1,
-    "allowed": "Leave Approver",
-    "condition": "doc.leave_approver_name in (\"Macdonald Dei\", \"Hazel Juddy Mensah\", \"Solomon Stanley Eyo\", \"Charles Akrofi\", \"Francis Opoku Amoah\", \"Sylvester Koomson\")",
-    "next_state": "Sent to Deputy Director-General for Approval",
+    "allowed": "DG",
+    "condition": "doc.leave_approver_name in (\"Macdonald Dei\", \"Hazel Juddy Mensah\", \"Solomon Stanley Eyo\", \"Charles Yaw Akrofi\", \"Francis Opoku Amoah\", \"Sylvester Koomson\")",
+    "next_state": "Sent to Director-General for Approval",
     "parent": "Leave Application Workflow",
     "parentfield": "transitions",
     "parenttype": "Workflow",
@@ -245,8 +245,8 @@
    {
     "action": "Reject",
     "allow_self_approval": 1,
-    "allowed": "Leave Approver",
-    "condition": "doc.leave_approver_name in (\"Macdonald Dei\", \"Hazel Juddy Mensah\", \"Solomon Stanley Eyo\", \"Charles Akrofi\", \"Francis Opoku Amoah\", \"Sylvester Koomson\")",
+    "allowed": "DG",
+    "condition": "doc.leave_approver_name in (\"Macdonald Dei\", \"Hazel Juddy Mensah\", \"Solomon Stanley Eyo\", \"Charles Yaw Akrofi\", \"Francis Opoku Amoah\", \"Sylvester Koomson\")",
     "next_state": "Leave REJECTED",
     "parent": "Leave Application Workflow",
     "parentfield": "transitions",
@@ -276,30 +276,6 @@
     "parentfield": "transitions",
     "parenttype": "Workflow",
     "state": "Sent to HR for Review",
-    "workflow_builder_id": null
-   },
-   {
-    "action": "Approve",
-    "allow_self_approval": 1,
-    "allowed": "DG",
-    "condition": "doc.leave_approver_name == \"Micheal Addo\"",
-    "next_state": "Sent to Director-General for Approval",
-    "parent": "Leave Application Workflow",
-    "parentfield": "transitions",
-    "parenttype": "Workflow",
-    "state": "Sent to Head for Approval",
-    "workflow_builder_id": null
-   },
-   {
-    "action": "Reject",
-    "allow_self_approval": 1,
-    "allowed": "DG",
-    "condition": "doc.leave_approver_name == \"Micheal Addo\"",
-    "next_state": "Leave REJECTED",
-    "parent": "Leave Application Workflow",
-    "parentfield": "transitions",
-    "parenttype": "Workflow",
-    "state": "Sent to Head for Approval",
     "workflow_builder_id": null
    },
    {

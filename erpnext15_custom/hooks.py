@@ -54,6 +54,8 @@ fixtures = [
             ]
         ]
     ]},
+    {"dt": "Workflow State"},
+    {"dt": "Workflow Action Master"},
     {"dt": "Workflow", "filters": [
         [
             "document_type", "in", [
@@ -61,7 +63,6 @@ fixtures = [
             ]
         ]
     ]},
-    {"dt": "Workflow State"},
     {"dt": "Print Format", "filters": [
         [
             "doc_type", "in", [
