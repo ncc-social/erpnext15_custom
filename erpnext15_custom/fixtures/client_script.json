@@ -4,10 +4,10 @@
   "doctype": "Client Script",
   "dt": "Employee",
   "enabled": 1,
-  "modified": "2023-11-29 16:45:30.686101",
+  "modified": "2023-12-07 23:01:52.442906",
   "module": "Erpnext15 Custom",
   "name": "Employee-Form",
-  "script": "frappe.ui.form.on(\"Employee\", {\n\trefresh(frm) {\n\t\tlet duration = moment.duration(moment().diff(cur_frm.doc.date_of_birth));\n        const formatDuration = (duration) => {\n            let years = duration.years();\n            let months= duration.months();\n            let days= duration.days();\n            let result = '';\n            if (years === 1) {\n                result += '1 year ';\n            } else if (years > 1) {\n                result += years + ' years ';\n            }\n            if (months === 1) {\n                result += '1 month ';\n            } else if (months > 1) {\n                result += months + ' months ';\n            }\n            if (days === 1) {\n                result += '1 day ';\n            } else if (days > 1) {\n                result += days + ' days ';\n            }\n            return result;\n        }\n        \n        cur_frm.set_value(\"custom_age\", formatDuration(duration));\n        cur_frm.add_fetch('reports_to',  'employee_name',  'reports_to_name');\n        \n\t}\n\n})",
+  "script": "frappe.ui.form.on(\"Employee\", {\n\trefresh(frm) {\n\t\tlet duration = moment.duration(moment().diff(cur_frm.doc.date_of_birth));\n        const formatDuration = (duration) => {\n            let years = duration.years();\n            let months= duration.months();\n            let days= duration.days();\n            let result = '';\n            if (years === 1) {\n                result += '1 year ';\n            } else if (years > 1) {\n                result += years + ' years ';\n            }\n            if (months === 1) {\n                result += '1 month ';\n            } else if (months > 1) {\n                result += months + ' months ';\n            }\n            if (days === 1) {\n                result += '1 day ';\n            } else if (days > 1) {\n                result += days + ' days ';\n            }\n            return result;\n        }\n        \n        frm.set_value(\"custom_age\", formatDuration(duration));\n        frm.add_fetch('reports_to',  'employee_name',  'reports_to_name');\n        \n\t}\n\n})",
   "view": "Form"
  },
  {
@@ -47,8 +47,8 @@
   "docstatus": 0,
   "doctype": "Client Script",
   "dt": "Employee",
-  "enabled": 1,
-  "modified": "2023-11-29 16:44:34.009016",
+  "enabled": 0,
+  "modified": "2023-12-07 23:05:13.730689",
   "module": "Erpnext15 Custom",
   "name": "Employee Folio Number",
   "script": "frappe.ui.form.on('Employee', {\n\trefresh: function(frm) {\n\t\tvar text = frm.doc.employee_number;\n\n        // Use a regular expression to extract \"JD\" or \"SD\" followed by numbers and \"/\"\n        var match = text.match(/(JD|SD)(\\d+)\\/(\\d+)/);\n\n        if (match) {\n            var extractedValue = match[1] + match[3];\n            frm.set_value('custom_folio_number', extractedValue);\n        } else {\n            console.log(\"Pattern not found.\");\n        }\n\t}\n})",

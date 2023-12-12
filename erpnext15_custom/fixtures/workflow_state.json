@@ -57,15 +57,6 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2023-11-30 18:12:09.191445",
-  "name": "Sent to HR for Review",
-  "style": "",
-  "workflow_state_name": "Sent to HR for Review"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
   "modified": "2023-10-28 16:42:00.562760",
   "name": "Leave Approval pending by Deputy Director-General",
   "style": "",
@@ -79,6 +70,15 @@
   "name": "Leave Approval pending by Director-General",
   "style": "",
   "workflow_state_name": "Leave Approval pending by Director-General"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-11-30 18:12:09.191445",
+  "name": "Sent to HR for Review",
+  "style": "",
+  "workflow_state_name": "Sent to HR for Review"
  },
  {
   "docstatus": 0,
