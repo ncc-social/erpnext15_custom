@@ -102,19 +102,19 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2023-10-28 16:39:44.883289",
-  "name": "Leave CANCELLED",
+  "modified": "2023-11-03 15:17:10.094295",
+  "name": "Sent to Deputy Director-General for Approval",
   "style": "",
-  "workflow_state_name": "Leave CANCELLED"
+  "workflow_state_name": "Sent to Deputy Director-General for Approval"
  },
  {
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2023-11-03 15:17:10.094295",
-  "name": "Sent to Deputy Director-General for Approval",
+  "modified": "2023-10-28 16:39:44.883289",
+  "name": "Leave CANCELLED",
   "style": "",
-  "workflow_state_name": "Sent to Deputy Director-General for Approval"
+  "workflow_state_name": "Leave CANCELLED"
  },
  {
   "docstatus": 0,

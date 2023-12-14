@@ -4,7 +4,7 @@
   "doctype": "Workflow",
   "document_type": "Leave Application",
   "is_active": 1,
-  "modified": "2023-12-12 20:00:38.961168",
+  "modified": "2023-12-14 13:29:42.170527",
   "name": "Leave Application Workflow",
   "override_status": 0,
   "send_email_alert": 0,
@@ -67,21 +67,6 @@
     "state": "Sent to Director for Approval",
     "update_field": "",
     "update_value": "",
-    "workflow_builder_id": null
-   },
-   {
-    "allow_edit": "DDG",
-    "avoid_status_override": 0,
-    "doc_status": "0",
-    "is_optional_state": 0,
-    "message": null,
-    "next_action_email_template": null,
-    "parent": "Leave Application Workflow",
-    "parentfield": "states",
-    "parenttype": "Workflow",
-    "state": "Sent to Deputy Director-General for Approval",
-    "update_field": null,
-    "update_value": null,
     "workflow_builder_id": null
    },
    {
@@ -171,20 +156,8 @@
     "workflow_builder_id": null
    },
    {
-    "action": "Submit Application",
-    "allow_self_approval": 1,
-    "allowed": "Employee",
-    "condition": "doc.leave_approver_name in (\"Kenneth Adu-Amanfoh\")",
-    "next_state": "Sent to Director-General for Approval",
-    "parent": "Leave Application Workflow",
-    "parentfield": "transitions",
-    "parenttype": "Workflow",
-    "state": "Draft",
-    "workflow_builder_id": null
-   },
-   {
     "action": "Approve",
-    "allow_self_approval": 1,
+    "allow_self_approval": 0,
     "allowed": "Leave Approver",
     "condition": "",
     "next_state": "Leave APPROVED",
@@ -196,7 +169,7 @@
    },
    {
     "action": "Reject",
-    "allow_self_approval": 1,
+    "allow_self_approval": 0,
     "allowed": "Leave Approver",
     "condition": null,
     "next_state": "Leave REJECTED",
@@ -210,7 +183,7 @@
     "action": "Approve",
     "allow_self_approval": 1,
     "allowed": "Leave Approver",
-    "condition": "doc.branch == \"Headquarters\"",
+    "condition": "doc.custom_branch == \"Headquarters\"",
     "next_state": "Sent to Director for Approval",
     "parent": "Leave Application Workflow",
     "parentfield": "transitions",
@@ -222,7 +195,7 @@
     "action": "Reject",
     "allow_self_approval": 1,
     "allowed": "Leave Approver",
-    "condition": "doc.branch == \"Headquarters\"",
+    "condition": "doc.custom_branch == \"Headquarters\"",
     "next_state": "Leave REJECTED",
     "parent": "Leave Application Workflow",
     "parentfield": "transitions",
@@ -233,7 +206,7 @@
    {
     "action": "Approve",
     "allow_self_approval": 1,
-    "allowed": "DG",
+    "allowed": "Leave Approver",
     "condition": "doc.leave_approver_name in (\"Macdonald Dei\", \"Hazel Juddy Mensah\", \"Solomon Stanley Eyo\", \"Charles Yaw Akrofi\", \"Francis Opoku Amoah\", \"Sylvester Koomson\")",
     "next_state": "Sent to Director-General for Approval",
     "parent": "Leave Application Workflow",
@@ -245,7 +218,7 @@
    {
     "action": "Reject",
     "allow_self_approval": 1,
-    "allowed": "DG",
+    "allowed": "Leave Approver",
     "condition": "doc.leave_approver_name in (\"Macdonald Dei\", \"Hazel Juddy Mensah\", \"Solomon Stanley Eyo\", \"Charles Yaw Akrofi\", \"Francis Opoku Amoah\", \"Sylvester Koomson\")",
     "next_state": "Leave REJECTED",
     "parent": "Leave Application Workflow",
@@ -280,6 +253,30 @@
    },
    {
     "action": "Approve",
+    "allow_self_approval": 0,
+    "allowed": "Director-Enforcement",
+    "condition": "doc.designation in (\"Regional Head\", \"Border Head\")",
+    "next_state": "Sent to Director-General for Approval",
+    "parent": "Leave Application Workflow",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Sent to Director for Approval",
+    "workflow_builder_id": null
+   },
+   {
+    "action": "Reject",
+    "allow_self_approval": 0,
+    "allowed": "Director-Enforcement",
+    "condition": "doc.designation in (\"Regional Head\", \"Border Head\")",
+    "next_state": "Leave REJECTED",
+    "parent": "Leave Application Workflow",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Sent to Director for Approval",
+    "workflow_builder_id": null
+   },
+   {
+    "action": "Approve",
     "allow_self_approval": 1,
     "allowed": "Director-DDR",
     "condition": "doc.department in (\"Drug Education & Prevention Department - NACOC\", \"Treatment Department - NACOC\", \"Alternative Livelihoods Development Department - NACOC\", \"Harm Reduction Department - NACOC\", \"Rehabilitation & Social Re-Integration Department - NACOC\")",
@@ -444,30 +441,6 @@
     "parentfield": "transitions",
     "parenttype": "Workflow",
     "state": "Sent to Director for Approval",
-    "workflow_builder_id": null
-   },
-   {
-    "action": "Approve",
-    "allow_self_approval": 1,
-    "allowed": "DDG",
-    "condition": "",
-    "next_state": "Leave APPROVED",
-    "parent": "Leave Application Workflow",
-    "parentfield": "transitions",
-    "parenttype": "Workflow",
-    "state": "Sent to Deputy Director-General for Approval",
-    "workflow_builder_id": null
-   },
-   {
-    "action": "Reject",
-    "allow_self_approval": 1,
-    "allowed": "DDG",
-    "condition": "",
-    "next_state": "Leave REJECTED",
-    "parent": "Leave Application Workflow",
-    "parentfield": "transitions",
-    "parenttype": "Workflow",
-    "state": "Sent to Deputy Director-General for Approval",
     "workflow_builder_id": null
    },
    {
