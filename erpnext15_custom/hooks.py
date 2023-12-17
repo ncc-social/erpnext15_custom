@@ -84,6 +84,20 @@ fixtures = [
                 "Employee"
             ]
         ]
+    ]},
+    {"dt": "Role Profile", "filters": [
+        [
+            "role_profile", "in", [
+                "Staff Role"
+            ]
+        ]
+    ]},
+    {"dt": "Module Profile", "filters": [
+        [
+            "module_profile_name", "in", [
+                "Staff Profile"
+            ]
+        ]
     ]}
 ]
 
@@ -213,6 +227,9 @@ fixtures = [
 	# 	"on_submit": "erpnext15_custom.my_scripts.leave_application.on_submit",
 	# 	"on_cancel": "erpnext15_custom.my_scripts.leave_application.on_cancel",
 	# }
+#    "User": {
+#        "validate": "erpnext15_custom.my_scripts.custom.validate"
+#    }
 #}
 
 # Scheduled Tasks
@@ -244,9 +261,10 @@ scheduler_events = {
 # Overriding Methods
 # ------------------------------
 #
-# override_whitelisted_methods = {
-#	"frappe.desk.doctype.event.event.get_events": "erpnext15_custom.event.get_events"
-# }
+#override_whitelisted_methods = {
+#	"frappe.desk.doctype.event.event.get_events": "erpnext15_custom.event.get_events",
+#   "frappe.core.doctype.user.user.set_full_name": "erpnext15_custom.my_scripts.custom.set_full_name"
+#}
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,

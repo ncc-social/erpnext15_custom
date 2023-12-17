@@ -93,15 +93,6 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2023-11-30 18:12:09.191445",
-  "name": "Sent to HR for Review",
-  "style": "",
-  "workflow_state_name": "Sent to HR for Review"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
   "modified": "2023-11-03 15:17:10.094295",
   "name": "Sent to Deputy Director-General for Approval",
   "style": "",
@@ -115,6 +106,15 @@
   "name": "Leave CANCELLED",
   "style": "",
   "workflow_state_name": "Leave CANCELLED"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-11-30 18:12:09.191445",
+  "name": "Sent to HR for Review",
+  "style": "",
+  "workflow_state_name": "Sent to HR for Review"
  },
  {
   "docstatus": 0,

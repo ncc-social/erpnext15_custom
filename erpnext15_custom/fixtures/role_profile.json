@@ -1,0 +1,17 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-12-17 11:59:19.846915",
+  "name": "Staff Role",
+  "role_profile": "Staff Role",
+  "roles": [
+   {
+    "parent": "Staff Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Employee"
+   }
+  ]
+ }
+]
