@@ -98,6 +98,13 @@ fixtures = [
                 "Staff Profile"
             ]
         ]
+    ]},
+    {"dt": "Department", "filters": [
+        [
+            "company", "in", [
+                "Narcotics Control Commission"
+            ]
+        ]
     ]}
 ]
 
