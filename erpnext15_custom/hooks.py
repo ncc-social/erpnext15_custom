@@ -98,8 +98,7 @@ fixtures = [
                 "Staff Profile"
             ]
         ]
-    ]},
-    {"dt": "Department"}
+    ]}
 ]
 
 # Includes in <head>
