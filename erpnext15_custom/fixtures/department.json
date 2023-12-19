@@ -1263,6 +1263,23 @@
   "shift_request_approver": []
  },
  {
+  "company": null,
+  "department_name": "All Departments",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Department",
+  "expense_approvers": [],
+  "is_group": 1,
+  "leave_approvers": [],
+  "leave_block_list": null,
+  "modified": "2023-09-24 11:09:32.255384",
+  "name": "All Departments",
+  "old_parent": null,
+  "parent_department": "",
+  "payroll_cost_center": null,
+  "shift_request_approver": []
+ },
+ {
   "company": "Narcotics Control Commission",
   "department_name": "Office of the Director-General",
   "disabled": 0,

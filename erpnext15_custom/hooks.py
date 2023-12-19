@@ -99,13 +99,7 @@ fixtures = [
             ]
         ]
     ]},
-    {"dt": "Department", "filters": [
-        [
-            "company", "in", [
-                "Narcotics Control Commission"
-            ]
-        ]
-    ]}
+    {"dt": "Department"}
 ]
 
 # Includes in <head>
