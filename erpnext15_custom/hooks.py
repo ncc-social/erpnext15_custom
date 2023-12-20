@@ -4,7 +4,7 @@ app_publisher = "NACOC"
 app_description = "ERPNext 15 Customisations"
 app_email = "social@ncc.gov.gh"
 app_license = "mit"
-# required_apps = []
+required_apps = ["frappe/erpnext/hrms"]
 
 fixtures = [
     {"dt": "Property Setter", "filters": [
