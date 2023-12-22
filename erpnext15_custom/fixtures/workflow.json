@@ -4,7 +4,7 @@
   "doctype": "Workflow",
   "document_type": "Leave Application",
   "is_active": 1,
-  "modified": "2023-12-20 10:44:19.305353",
+  "modified": "2023-12-22 10:02:24.003800",
   "name": "Leave Application Workflow",
   "override_status": 0,
   "send_email_alert": 0,

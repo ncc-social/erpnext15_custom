@@ -85,6 +85,7 @@ fixtures = [
             ]
         ]
     ]},
+    {"dt": "Role"},
     {"dt": "Role Profile", "filters": [
         [
             "role_profile", "in", [
