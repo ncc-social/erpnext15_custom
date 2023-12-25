@@ -86,13 +86,7 @@ fixtures = [
         ]
     ]},
     {"dt": "Role"},
-    {"dt": "Role Profile", "filters": [
-        [
-            "role_profile", "in", [
-                "Staff Role"
-            ]
-        ]
-    ]},
+    {"dt": "Role Profile"},
     {"dt": "Module Profile", "filters": [
         [
             "module_profile_name", "in", [

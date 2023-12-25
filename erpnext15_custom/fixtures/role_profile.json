@@ -2,6 +2,141 @@
  {
   "docstatus": 0,
   "doctype": "Role Profile",
+  "modified": "2023-09-24 16:16:32.936106",
+  "name": "Inventory",
+  "role_profile": "Inventory",
+  "roles": [
+   {
+    "parent": "Inventory",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Inventory",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock Manager"
+   },
+   {
+    "parent": "Inventory",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Item Manager"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-09-24 16:16:32.944690",
+  "name": "Manufacturing",
+  "role_profile": "Manufacturing",
+  "roles": [
+   {
+    "parent": "Manufacturing",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Manufacturing",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Manufacturing User"
+   },
+   {
+    "parent": "Manufacturing",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Manufacturing Manager"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-09-24 16:16:32.949666",
+  "name": "Accounts",
+  "role_profile": "Accounts",
+  "roles": [
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Accounts User"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Accounts Manager"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-09-24 16:16:32.953627",
+  "name": "Sales",
+  "role_profile": "Sales",
+  "roles": [
+   {
+    "parent": "Sales",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales User"
+   },
+   {
+    "parent": "Sales",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Sales",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales Manager"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-09-24 16:16:32.957648",
+  "name": "Purchase",
+  "role_profile": "Purchase",
+  "roles": [
+   {
+    "parent": "Purchase",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Item Manager"
+   },
+   {
+    "parent": "Purchase",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Purchase",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Purchase User"
+   },
+   {
+    "parent": "Purchase",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Purchase Manager"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
   "modified": "2023-12-17 11:59:19.846915",
   "name": "Staff Role",
   "role_profile": "Staff Role",
@@ -11,6 +146,426 @@
     "parentfield": "roles",
     "parenttype": "Role Profile",
     "role": "Employee"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-12-25 11:13:25.613718",
+  "name": "Precursor Manager",
+  "role_profile": "Precursor Manager",
+  "roles": [
+   {
+    "parent": "Precursor Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Precursor Manager"
+   },
+   {
+    "parent": "Precursor Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Precursor Officer"
+   },
+   {
+    "parent": "Precursor Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Leave Approver"
+   },
+   {
+    "parent": "Precursor Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Employee"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-11-02 08:17:39.397918",
+  "name": "NACOC Profile",
+  "role_profile": "NACOC Profile",
+  "roles": [
+   {
+    "parent": "NACOC Profile",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "NACOC User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-12-25 09:44:30.697251",
+  "name": "MMU Officer",
+  "role_profile": "MMU Officer",
+  "roles": [
+   {
+    "parent": "MMU Officer",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "MMU Officer"
+   },
+   {
+    "parent": "MMU Officer",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Employee"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-12-25 11:13:07.763055",
+  "name": "MMU Manager",
+  "role_profile": "MMU Manager",
+  "roles": [
+   {
+    "parent": "MMU Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "MMU Manager"
+   },
+   {
+    "parent": "MMU Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "MMU Officer"
+   },
+   {
+    "parent": "MMU Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Employee"
+   },
+   {
+    "parent": "MMU Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Leave Approver"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-03-12 17:15:03.744521",
+  "name": "Precursor Officer",
+  "role_profile": "Precursor Officer",
+  "roles": [
+   {
+    "parent": "Precursor Officer",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Precursor Officer"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-11-08 11:13:04.360429",
+  "name": "Aviance Officer",
+  "role_profile": "Aviance Officer",
+  "roles": [
+   {
+    "parent": "Aviance Officer",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Aviance Officer"
+   },
+   {
+    "parent": "Aviance Officer",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "NACOC User"
+   },
+   {
+    "parent": "Aviance Officer",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Employee"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-12-25 11:12:55.509221",
+  "name": "Aviance Manager",
+  "role_profile": "Aviance Manager",
+  "roles": [
+   {
+    "parent": "Aviance Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Aviance Manager"
+   },
+   {
+    "parent": "Aviance Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Aviance Officer"
+   },
+   {
+    "parent": "Aviance Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Employee"
+   },
+   {
+    "parent": "Aviance Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "NACOC User"
+   },
+   {
+    "parent": "Aviance Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Leave Approver"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-12-25 10:37:48.299126",
+  "name": "Head Role",
+  "role_profile": "Head Role",
+  "roles": [
+   {
+    "parent": "Head Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Employee"
+   },
+   {
+    "parent": "Head Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Leave Approver"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-12-25 11:15:50.395333",
+  "name": "Enf Role",
+  "role_profile": "Enf Role",
+  "roles": [
+   {
+    "parent": "Enf Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Employee"
+   },
+   {
+    "parent": "Enf Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Leave Approver"
+   },
+   {
+    "parent": "Enf Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Director-Enforcement"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-12-25 11:16:06.243363",
+  "name": "Finance Role",
+  "role_profile": "Finance Role",
+  "roles": [
+   {
+    "parent": "Finance Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Employee"
+   },
+   {
+    "parent": "Finance Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Leave Approver"
+   },
+   {
+    "parent": "Finance Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Director-Finance"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-12-25 11:16:21.645896",
+  "name": "HRA Role",
+  "role_profile": "HRA Role",
+  "roles": [
+   {
+    "parent": "HRA Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Employee"
+   },
+   {
+    "parent": "HRA Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Leave Approver"
+   },
+   {
+    "parent": "HRA Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Director-HRA"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-12-25 11:16:37.694594",
+  "name": "Intel Role",
+  "role_profile": "Intel Role",
+  "roles": [
+   {
+    "parent": "Intel Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Employee"
+   },
+   {
+    "parent": "Intel Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Leave Approver"
+   },
+   {
+    "parent": "Intel Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Director-Intel"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-12-25 11:16:52.399577",
+  "name": "PAIR Role",
+  "role_profile": "PAIR Role",
+  "roles": [
+   {
+    "parent": "PAIR Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Employee"
+   },
+   {
+    "parent": "PAIR Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Leave Approver"
+   },
+   {
+    "parent": "PAIR Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Director-PAIR"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-12-25 11:17:17.828658",
+  "name": "RPP Role",
+  "role_profile": "RPP Role",
+  "roles": [
+   {
+    "parent": "RPP Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Employee"
+   },
+   {
+    "parent": "RPP Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Leave Approver"
+   },
+   {
+    "parent": "RPP Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Director-RPP"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-12-25 11:20:48.351912",
+  "name": "DDR Role",
+  "role_profile": "DDR Role",
+  "roles": [
+   {
+    "parent": "DDR Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Employee"
+   },
+   {
+    "parent": "DDR Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Leave Approver"
+   },
+   {
+    "parent": "DDR Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Director-DDR"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-12-25 11:22:57.627183",
+  "name": "DG Role",
+  "role_profile": "DG Role",
+  "roles": [
+   {
+    "parent": "DG Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Employee"
+   },
+   {
+    "parent": "DG Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Leave Approver"
+   },
+   {
+    "parent": "DG Role",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "DG"
    }
   ]
  }
