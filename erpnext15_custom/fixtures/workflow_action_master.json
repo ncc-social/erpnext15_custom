@@ -16,16 +16,16 @@
  {
   "docstatus": 0,
   "doctype": "Workflow Action Master",
-  "modified": "2023-10-28 16:45:40.034138",
-  "name": "Submit Application",
-  "workflow_action_name": "Submit Application"
+  "modified": "2023-11-26 19:58:27.662691",
+  "name": "Refuse",
+  "workflow_action_name": "Refuse"
  },
  {
   "docstatus": 0,
   "doctype": "Workflow Action Master",
-  "modified": "2023-11-26 19:58:27.662691",
-  "name": "Refuse",
-  "workflow_action_name": "Refuse"
+  "modified": "2023-10-28 16:45:40.034138",
+  "name": "Submit Application",
+  "workflow_action_name": "Submit Application"
  },
  {
   "docstatus": 0,
