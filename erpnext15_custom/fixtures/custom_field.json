@@ -1004,7 +1004,7 @@
   "label": "Rejection Reason",
   "length": 0,
   "mandatory_depends_on": null,
-  "modified": "2023-11-29 16:29:51.154357",
+  "modified": "2024-01-07 15:26:45.699004",
   "module": null,
   "name": "Leave Application-custom_rejection_reason",
   "no_copy": 0,

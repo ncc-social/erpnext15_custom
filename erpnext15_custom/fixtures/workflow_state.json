@@ -120,19 +120,19 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2023-11-07 10:44:35.496916",
-  "name": "Draft",
+  "modified": "2023-11-06 16:14:58.905289",
+  "name": "Sent to Director-General for Approval",
   "style": "Warning",
-  "workflow_state_name": "Draft"
+  "workflow_state_name": "Sent to Director-General for Approval"
  },
  {
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2023-11-06 16:14:58.905289",
-  "name": "Sent to Director-General for Approval",
+  "modified": "2023-11-07 10:44:35.496916",
+  "name": "Draft",
   "style": "Warning",
-  "workflow_state_name": "Sent to Director-General for Approval"
+  "workflow_state_name": "Draft"
  },
  {
   "docstatus": 0,
