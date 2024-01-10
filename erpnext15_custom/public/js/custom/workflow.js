@@ -51,7 +51,6 @@ class WorkflowOverride extends frappe.ui.form.States {
                                         transition: d
                                     })
                                     .then((res) => {
-                                        console.log(res);
                                         if (res) {
                                             me.frm.selected_workflow_action = d.action;
                                             me.frm.script_manager.trigger("before_workflow_action").then(() => {
