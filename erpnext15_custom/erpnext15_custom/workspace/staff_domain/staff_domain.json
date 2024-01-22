@@ -1,7 +1,7 @@
 {
  "charts": [],
  "content": "[{\"id\":\"n9sXbD-nzG\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Staff Domain</span>\",\"col\":12}},{\"id\":\"q1Cu6UZpqA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee\",\"col\":3}},{\"id\":\"lqG9_choZ1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Leave Application\",\"col\":3}}]",
- "creation": "2023-12-20 10:03:02.421097",
+ "creation": "2024-01-18 15:22:43.110790",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Staff Domain",
  "links": [],
- "modified": "2024-01-10 08:41:11.736545",
+ "modified": "2024-01-22 10:35:43.081457",
  "modified_by": "Administrator",
  "module": "Erpnext15 Custom",
  "name": "Staff Domain",
@@ -27,6 +27,9 @@
   },
   {
    "role": "Employee"
+  },
+  {
+   "role": "All"
   }
  ],
  "sequence_id": 32.0,

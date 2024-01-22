@@ -12,7 +12,7 @@
   "is_hidden": 0,
   "label": "Staff Domain",
   "links": [],
-  "modified": "2024-01-10 08:41:11.736545",
+  "modified": "2024-01-22 10:35:43.081457",
   "module": "Erpnext15 Custom",
   "name": "Staff Domain",
   "number_cards": [],
@@ -32,6 +32,12 @@
     "parentfield": "roles",
     "parenttype": "Workspace",
     "role": "Employee"
+   },
+   {
+    "parent": "Staff Domain",
+    "parentfield": "roles",
+    "parenttype": "Workspace",
+    "role": "All"
    }
   ],
   "sequence_id": 32.0,
