@@ -22,7 +22,8 @@ fixtures = [
                 "User",
                 "Report",
                 "Workspace",
-                "Dashboard"
+                "Dashboard",
+                "Employee Transfer"
             ]
         ]
     ]},
