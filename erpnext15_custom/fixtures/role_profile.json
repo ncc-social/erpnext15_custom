@@ -491,21 +491,6 @@
  {
   "docstatus": 0,
   "doctype": "Role Profile",
-  "modified": "2023-03-12 17:15:03.744521",
-  "name": "Precursor Officer",
-  "role_profile": "Precursor Officer",
-  "roles": [
-   {
-    "parent": "Precursor Officer",
-    "parentfield": "roles",
-    "parenttype": "Role Profile",
-    "role": "Precursor Officer"
-   }
-  ]
- },
- {
-  "docstatus": 0,
-  "doctype": "Role Profile",
   "modified": "2023-11-08 11:13:04.360429",
   "name": "Aviance Officer",
   "role_profile": "Aviance Officer",
@@ -566,6 +551,27 @@
     "parentfield": "roles",
     "parenttype": "Role Profile",
     "role": "Leave Approver"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-12-17 13:13:19.315905",
+  "name": "Precursor Officer",
+  "role_profile": "Precursor Officer",
+  "roles": [
+   {
+    "parent": "Precursor Officer",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Precursor Officer"
+   },
+   {
+    "parent": "Precursor Officer",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Employee"
    }
   ]
  }

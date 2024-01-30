@@ -654,5 +654,21 @@
   "property_type": "Check",
   "row_name": null,
   "value": "1"
+ },
+ {
+  "default_value": null,
+  "doc_type": "Employee Transfer",
+  "docstatus": 0,
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocField",
+  "field_name": "create_new_employee_id",
+  "is_system_generated": 0,
+  "modified": "2024-01-22 11:32:57.731667",
+  "module": null,
+  "name": "Employee Transfer-create_new_employee_id-hidden",
+  "property": "hidden",
+  "property_type": "Check",
+  "row_name": null,
+  "value": "1"
  }
 ]
