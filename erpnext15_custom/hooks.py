@@ -89,7 +89,8 @@ fixtures = [
     {"dt": "Auto Email Report", "filters": [
         [
             "report", "in", [
-                "Leaves started in the previous month"
+                "[REPORT] Leaves started in the previous month",
+                "[REPORT] Employees resuming from leave this week"
             ]
         ]
     ]},
