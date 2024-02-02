@@ -86,6 +86,13 @@ fixtures = [
             ]
         ]
     ]},
+    {"dt": "Auto Email Report", "filters": [
+        [
+            "report", "in", [
+                "Leaves started in the previous month"
+            ]
+        ]
+    ]},
     {"dt": "Role"},
     {"dt": "Role Profile"},
     {"dt": "Module Profile", "filters": [

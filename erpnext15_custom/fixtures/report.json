@@ -6,11 +6,11 @@
   "docstatus": 0,
   "doctype": "Report",
   "filters": [],
-  "is_standard": "No",
+  "is_standard": "Yes",
   "javascript": null,
   "json": null,
   "letter_head": "",
-  "modified": "2023-11-29 21:57:02.908133",
+  "modified": "2024-02-02 10:18:48.479728",
   "module": "Erpnext15 Custom",
   "name": "Employee on Leave this week",
   "prepared_report": 0,
@@ -357,6 +357,54 @@
     "parentfield": "roles",
     "parenttype": "Report",
     "role": "HR Manager"
+   }
+  ]
+ },
+ {
+  "add_total_row": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "Yes",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2024-02-02 11:42:35.162921",
+  "module": "Erpnext15 Custom",
+  "name": "Leaves started in the previous month",
+  "prepared_report": 0,
+  "query": "SELECT \n    UPPER(employee_name) as \"EMPLOYEE:Data:250\",\n    UPPER(department) as \"DEPARTMENT:Data:200\",\n    CASE \n        WHEN leave_type IN ('Annual Leave - JD', 'Annual Leave - SD') THEN 'ANNUAL LEAVE'\n        ELSE UPPER(leave_type)\n    END as \"LEAVE TYPE:Data:150\",\n    CONCAT(\n        RIGHT(CONCAT('00', DAY(from_date)), 2),\n        '-',\n        RIGHT(CONCAT('00', MONTH(from_date)), 2),\n        '-',\n        YEAR(from_date)\n    ) as \"LEAVE START DATE:Data:170\",\n    CONCAT(\n        RIGHT(CONCAT('00', DAY(to_date)), 2),\n        '-',\n        RIGHT(CONCAT('00', MONTH(to_date)), 2),\n        '-',\n        YEAR(to_date)\n    ) as \"LEAVE END DATE:Data:170\",\n    total_leave_days as \"LEAVE DAYS:Int:120\"\nFROM \n    `tabLeave Application`\nWHERE \n    workflow_state = 'Leave APPROVED'\n    AND MONTH(from_date) = MONTH(DATE_SUB(CURDATE(), INTERVAL 1 MONTH))\n    AND YEAR(from_date) = YEAR(DATE_SUB(CURDATE(), INTERVAL 1 MONTH))\nORDER BY from_date;\n",
+  "ref_doctype": "Leave Application",
+  "reference_report": null,
+  "report_name": "Leaves started in the previous month",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "Leaves started in the previous month",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR Manager"
+   },
+   {
+    "parent": "Leaves started in the previous month",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR User"
+   },
+   {
+    "parent": "Leaves started in the previous month",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Director-HRA"
+   },
+   {
+    "parent": "Leaves started in the previous month",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "DG"
    }
   ]
  }
