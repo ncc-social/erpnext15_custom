@@ -73,8 +73,8 @@ fixtures = [
     ]},
     {"dt": "Workspace", "filters": [
         [
-            "module", "in", [
-                "Erpnext15 Custom"
+            "title", "in", [
+                "Staff Domain"
             ]
         ]
     ]},

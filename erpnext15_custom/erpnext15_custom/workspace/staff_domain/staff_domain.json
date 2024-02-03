@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"n9sXbD-nzG\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Staff Domain</span>\",\"col\":12}},{\"id\":\"q1Cu6UZpqA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee\",\"col\":3}},{\"id\":\"lqG9_choZ1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Leave Application\",\"col\":3}}]",
+ "content": "[{\"id\":\"n9sXbD-nzG\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Staff Domain</span>\",\"col\":12}},{\"id\":\"q1Cu6UZpqA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee\",\"col\":3}},{\"id\":\"lqG9_choZ1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Leave Application\",\"col\":3}},{\"id\":\"StCqDh82if\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"XYZ\",\"col\":3}}]",
  "creation": "2024-02-01 09:45:26.155800",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Staff Domain",
  "links": [],
- "modified": "2024-02-03 16:53:55.778673",
+ "modified": "2024-02-03 17:19:44.507710",
  "modified_by": "Administrator",
  "module": "Erpnext15 Custom",
  "name": "Staff Domain",
@@ -31,6 +31,13 @@
  ],
  "sequence_id": 32.0,
  "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "XYZ",
+   "link_to": "XXYZ",
+   "type": "DocType"
+  },
   {
    "color": "Green",
    "doc_view": "List",
