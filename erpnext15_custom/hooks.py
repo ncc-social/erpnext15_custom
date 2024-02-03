@@ -74,7 +74,7 @@ fixtures = [
     {"dt": "Workspace", "filters": [
         [
             "title", "in", [
-                "Staff Domain"
+                "Employee Zone"
             ]
         ]
     ]},
