@@ -1,0 +1,41 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-03 16:56:56.295703",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "test_xyz"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "test_xyz",
+   "fieldtype": "Check",
+   "label": "Test XYZ"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-02-03 16:57:33.101936",
+ "modified_by": "Administrator",
+ "module": "Erpnext15 Custom",
+ "name": "XYZ",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
