@@ -1,8 +1,17 @@
 {
  "charts": [],
- "content": "[{\"id\":\"OaNfL1c3kn\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"id\":\"RLzhn9XCy2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee\",\"col\":3}},{\"id\":\"KLK7UVf64r\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Leave Application\",\"col\":3}},{\"id\":\"JkLmKA-1I4\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"_57m8C009y\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"KcsjhQSqi5\",\"type\":\"card\",\"data\":{\"card_name\":\"Employee\",\"col\":4}},{\"id\":\"v0nMQxB4O-\",\"type\":\"card\",\"data\":{\"card_name\":\"Leaves\",\"col\":4}},{\"id\":\"kNeGIUz59T\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"ucwa2sJ-R-\",\"type\":\"card\",\"data\":{\"card_name\":\"Attendance\",\"col\":4}},{\"id\":\"XItJPQEwAU\",\"type\":\"card\",\"data\":{\"card_name\":\"Key Reports\",\"col\":4}},{\"id\":\"775LGVf84K\",\"type\":\"card\",\"data\":{\"card_name\":\"Other Reports\",\"col\":4}}]",
+ "content": "[{\"id\":\"OaNfL1c3kn\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Shortcuts</b></span>\",\"col\":12}},{\"id\":\"bGFfrfP6ov\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Profile Nice\",\"col\":6}},{\"id\":\"ddIFTzMp2a\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Upcoming Holidays\",\"col\":6}},{\"id\":\"JkLmKA-1I4\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"RLzhn9XCy2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee\",\"col\":3}},{\"id\":\"KLK7UVf64r\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Leave Application\",\"col\":3}},{\"id\":\"_57m8C009y\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"KcsjhQSqi5\",\"type\":\"card\",\"data\":{\"card_name\":\"Employee\",\"col\":4}},{\"id\":\"v0nMQxB4O-\",\"type\":\"card\",\"data\":{\"card_name\":\"Leaves\",\"col\":4}},{\"id\":\"kNeGIUz59T\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"ucwa2sJ-R-\",\"type\":\"card\",\"data\":{\"card_name\":\"Attendance\",\"col\":4}},{\"id\":\"XItJPQEwAU\",\"type\":\"card\",\"data\":{\"card_name\":\"Key Reports\",\"col\":4}},{\"id\":\"775LGVf84K\",\"type\":\"card\",\"data\":{\"card_name\":\"Other Reports\",\"col\":4}}]",
  "creation": "2024-02-03 18:03:47.730961",
- "custom_blocks": [],
+ "custom_blocks": [
+  {
+   "custom_block_name": "Upcoming Holidays",
+   "label": "Upcoming Holidays"
+  },
+  {
+   "custom_block_name": "Profile Nice",
+   "label": "Profile Nice"
+  }
+ ],
  "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
@@ -241,7 +250,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Other Reports",
-   "link_count": 5,
+   "link_count": 4,
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -271,16 +280,6 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Department Leave",
-   "link_count": 0,
-   "link_to": "Department Leave",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "Leaves started in previous month",
    "link_count": 0,
    "link_to": "[REPORT] Leaves started in the previous month",
@@ -299,7 +298,7 @@
    "type": "Link"
   }
  ],
- "modified": "2024-02-03 22:56:32.214917",
+ "modified": "2024-02-05 10:43:49.435218",
  "modified_by": "Administrator",
  "module": "Erpnext15 Custom",
  "name": "Employee Zone",

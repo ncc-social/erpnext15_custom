@@ -71,6 +71,14 @@ fixtures = [
             ]
         ]
     ]},
+    {"dt": "Custom HTML Block", "filters": [
+        [
+            "name", "in", [
+                "Profile Nice",
+                "Upcoming Holidays"
+            ]
+        ]
+    ]},
     {"dt": "Workspace", "filters": [
         [
             "title", "in", [
