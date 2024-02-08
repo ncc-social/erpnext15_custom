@@ -22,6 +22,7 @@
   "send_if_data": 0,
   "sender": "Jupiter Platform",
   "to_date_field": null,
+  "use_first_day_of_period": 0,
   "user": "Administrator"
  },
  {
@@ -47,6 +48,7 @@
   "send_if_data": 0,
   "sender": "Jupiter Platform",
   "to_date_field": null,
+  "use_first_day_of_period": 0,
   "user": "Administrator"
  }
 ]

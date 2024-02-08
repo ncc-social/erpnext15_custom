@@ -2,8 +2,8 @@
  {
   "docstatus": 0,
   "doctype": "Custom HTML Block",
-  "html": "<head>\n    <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Inter:400,400i,700\" />\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css\" />\n</head>\n<div class=\"card\">\n\n    <div class=\"card-text\">\n        <div class=\"portada\" id=\"user_image\">\n            <div class=\"overlay\"></div>\n\n        </div>\n        <div class=\"title-total\">\n            <div class=\"title\" id=\"email\">Ant Collector</div>\n            <h2 id=\"full_name\"></h2>\n            \n            <div class=\"desc\">CORE VALUES: Diligence, Integrity & Vigilance</div>\n            <div class=\"actions\">\n                <button><i class=\"fa fa-envelope\"></i></button>\n                <button><i class=\"fa fa-phone-square\"></i></button>\n                <button><i class=\"fa fa-globe\"></i></button>\n            </div>\n        </div>\n\n    </div>\n</div>",
-  "modified": "2024-02-06 05:53:28.676667",
+  "html": "<head>\n    <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Inter:400,400i,700\" />\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css\" />\n</head>\n<div class=\"card\">\n\n    <div class=\"card-text\">\n        <div class=\"portada\" id=\"user_image\">\n            <div class=\"overlay\"></div>\n\n        </div>\n        <div class=\"title-total\">\n            <div class=\"title\" id=\"full_name\">Ant Collector</div>\n            <h2>CORE VALUES</h2>\n            \n            <div class=\"desc\">Discipline, Integrity & Vigilance</div>\n            <div class=\"actions\">\n                <button><i class=\"fa fa-envelope\"></i></button>\n                <button><i class=\"fa fa-phone-square\"></i></button>\n                <button><i class=\"fa fa-globe\"></i></button>\n            </div>\n        </div>\n\n    </div>\n</div>",
+  "modified": "2024-02-06 11:08:55.468066",
   "name": "Profile Nice",
   "private": 0,
   "roles": [],
