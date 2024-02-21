@@ -10,6 +10,8 @@ from frappe.permissions import (
 from frappe.utils import cstr, getdate, today, validate_email_address
 from frappe.utils.nestedset import NestedSet
 
+from erpnext.utilities.transaction_base import delete_events
+
 class CustomEmployee(NestedSet):
 	nsm_parent_field = "reports_to"
 
