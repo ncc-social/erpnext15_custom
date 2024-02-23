@@ -1331,3 +1331,31 @@ def get_leave_approver(employee):
 
 def on_doctype_update():
 	frappe.db.add_index("Leave Application", ["employee", "from_date", "to_date"])
+
+@frappe.whitelist()
+def get_leave_approver(department):
+    leave_approvers = frappe.db.get_all("Department Approver",
+                        filters={"parent": department},
+                        fields=["approver"],
+                        order_by='idx',
+                        limit=2)
+
+    primary_approver = leave_approvers[0].get("approver") if leave_approvers else None
+
+    if primary_approver and is_user_on_leave(primary_approver):
+        return leave_approvers[1].get("approver") if len(leave_approvers) > 1 else None
+    else:
+        return primary_approver
+
+
+def is_user_on_leave(user):
+    current_date = frappe.utils.today()
+
+    leave_record_exists = frappe.db.exists("Leave Application", {
+        "employee": frappe.db.get_value("Employee", {"user_id": user}),
+        "docstatus": 1,
+        "from_date": ("<=", current_date),
+        "to_date": (">=", current_date)
+    })
+
+    return bool(leave_record_exists)
