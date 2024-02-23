@@ -129,19 +129,19 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2023-11-06 16:15:19.043862",
-  "name": "Leave APPROVED",
-  "style": "Success",
-  "workflow_state_name": "Leave APPROVED"
+  "modified": "2023-11-06 16:15:31.408535",
+  "name": "Leave REJECTED",
+  "style": "Danger",
+  "workflow_state_name": "Leave REJECTED"
  },
  {
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2023-11-06 16:15:31.408535",
-  "name": "Leave REJECTED",
-  "style": "Danger",
-  "workflow_state_name": "Leave REJECTED"
+  "modified": "2023-11-06 16:15:19.043862",
+  "name": "Leave APPROVED",
+  "style": "Success",
+  "workflow_state_name": "Leave APPROVED"
  },
  {
   "docstatus": 0,
