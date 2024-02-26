@@ -1333,7 +1333,7 @@ def on_doctype_update():
 	frappe.db.add_index("Leave Application", ["employee", "from_date", "to_date"])
 
 @frappe.whitelist()
-def get_leave_approver(department):
+def fetch_leave_approver(department):
     leave_approvers = frappe.db.get_all("Department Approver",
                         filters={"parent": department},
                         fields=["approver"],
