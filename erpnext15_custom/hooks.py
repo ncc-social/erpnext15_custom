@@ -15,15 +15,14 @@ fixtures = [
                 "Leave Type",
                 "Training Event",
                 "Vehicle",
-                "Notification",
-                "Notification Recipient",
                 "Print Format",
                 "Issue",
                 "User",
                 "Report",
                 "Workspace",
                 "Dashboard",
-                "Employee Transfer"
+                "Employee Transfer",
+                "Department"
             ]
         ]
     ]},
@@ -37,13 +36,6 @@ fixtures = [
                 "Report",
                 "Training Event"
 
-            ]
-        ]
-    ]},
-    {"dt": "Notification", "filters": [
-        [
-            "document_type", "in", [
-                "Leave Application"
             ]
         ]
     ]},
@@ -91,14 +83,6 @@ fixtures = [
             "ref_doctype", "in", [
                 "Leave Application",
                 "Employee"
-            ]
-        ]
-    ]},
-    {"dt": "Auto Email Report", "filters": [
-        [
-            "report", "in", [
-                "[REPORT] Leaves started in the previous month",
-                "[REPORT] Employees resuming from leave this week"
             ]
         ]
     ]},
