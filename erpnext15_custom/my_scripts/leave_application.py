@@ -1333,19 +1333,37 @@ def on_doctype_update():
 	frappe.db.add_index("Leave Application", ["employee", "from_date", "to_date"])
 
 @frappe.whitelist()
-def fetch_leave_approver(department):
-    leave_approvers = frappe.db.get_all("Department Approver",
-                        filters={"parent": department},
-                        fields=["approver"],
-                        order_by='idx',
-                        limit=2)
+def fetch_leave_approver(employee):
+    # Fetch employee details and department
+    employee_details = frappe.db.get_value(
+        "Employee", employee, ["leave_approver", "department"]
+    )
+    
+    if not employee_details:
+        return None  # Employee not found
+    
+    leave_approver, department = employee_details
 
-    primary_approver = leave_approvers[0].get("approver") if leave_approvers else None
-
-    if primary_approver and is_user_on_leave(primary_approver):
-        return leave_approvers[1].get("approver") if len(leave_approvers) > 1 else None
-    else:
-        return primary_approver
+    if not leave_approver and department:
+        # Fetch primary and secondary leave approvers for the department
+        primary_leave_approver = frappe.db.get_value(
+            "Department Approver",
+            {"parent": department, "parentfield": "leave_approvers", "idx": 1},
+            "approver",
+        )
+        secondary_leave_approver = frappe.db.get_value(
+            "Department Approver",
+            {"parent": department, "parentfield": "leave_approvers", "idx": 2},
+            "approver",
+        )
+        
+        # Check if primary leave approver is available
+        if primary_leave_approver and not is_user_on_leave(primary_leave_approver):
+            return primary_leave_approver
+        elif secondary_leave_approver and not is_user_on_leave(secondary_leave_approver):
+            return secondary_leave_approver
+    
+    return leave_approver
 
 
 def is_user_on_leave(user):

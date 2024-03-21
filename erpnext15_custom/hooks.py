@@ -47,15 +47,6 @@ fixtures = [
             ]
         ]
     ]},
-    {"dt": "Workflow State"},
-    {"dt": "Workflow Action Master"},
-    {"dt": "Workflow", "filters": [
-        [
-            "document_type", "in", [
-                "Leave Application"
-            ]
-        ]
-    ]},
     {"dt": "Print Format", "filters": [
         [
             "doc_type", "in", [
@@ -86,8 +77,6 @@ fixtures = [
             ]
         ]
     ]},
-    {"dt": "Role"},
-    {"dt": "Role Profile"},
     {"dt": "Module Profile", "filters": [
         [
             "module_profile_name", "in", [
