@@ -392,7 +392,7 @@
   "collapsible_depends_on": null,
   "columns": 0,
   "default": null,
-  "depends_on": "eval:[\n    \"Compassionate Leave\",\n    \"Casual Leave\",\n    \"Sick Leave\",\n    \"Maternity Leave\",\n    \"Paternity Leave\"]\n    .indexOf(doc.leave_type) \n    > -1",
+  "depends_on": "eval:[\n    \"Compassionate Leave\",\n    \"Sick Leave\",\n    \"Maternity Leave\",\n    \"Paternity Leave\"]\n    .indexOf(doc.leave_type) \n    > -1",
   "description": null,
   "docstatus": 0,
   "doctype": "Custom Field",

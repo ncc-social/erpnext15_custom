@@ -574,5 +574,41 @@
     "role": "Employee"
    }
   ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-03-21 12:07:08.691610",
+  "name": "FrontDesk Officer Profile",
+  "role_profile": "FrontDesk Officer Profile",
+  "roles": [
+   {
+    "parent": "FrontDesk Officer Profile",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "FrontDesk Officer"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-03-21 12:08:14.955947",
+  "name": "FrontDesk Supervisor Profile",
+  "role_profile": "FrontDesk Supervisor Profile",
+  "roles": [
+   {
+    "parent": "FrontDesk Supervisor Profile",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "FrontDesk Officer"
+   },
+   {
+    "parent": "FrontDesk Supervisor Profile",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "FrontDesk Supervisor"
+   }
+  ]
  }
 ]
