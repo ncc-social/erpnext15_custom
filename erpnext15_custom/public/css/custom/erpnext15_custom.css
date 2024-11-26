@@ -4,7 +4,7 @@
     display: none;
 }
 
-/* progress step*/
+/* progress step */
 .stepper-wrapper {
     font-family: Arial;
     margin-top: 50px;
@@ -144,9 +144,4 @@
 
 .stepper-item:last-child::after {
     content: none;
-}
-
-.indicator-pill.whitespace-nowrap {
-    display: none;
-    /* for only leave application*/
 }
