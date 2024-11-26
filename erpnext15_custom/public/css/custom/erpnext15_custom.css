@@ -1,3 +1,152 @@
-.form-tags, .form-shared, .form-sidebar-stats {
+.form-tags,
+.form-shared,
+.form-sidebar-stats {
     display: none;
+}
+
+/* progress step*/
+.stepper-wrapper {
+    font-family: Arial;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.stepper-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+
+    @media (max-width: 768px) {
+        font-size: 12px;
+    }
+
+    ;
+    text-align: center;
+}
+
+.stepper-item::before {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+    top: 17px;
+    left: -50%;
+    z-index: 2;
+}
+
+.stepper-item::after {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+    top: 17px;
+    left: 50%;
+    z-index: 2;
+}
+
+.stepper-item .step-counter {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #ccc;
+    margin-bottom: 6px;
+}
+
+.stepper-item.active {
+    font-weight: bold;
+}
+
+.step-date {
+    font-size: 10px
+}
+
+.stepper-item.completed .step-counter {
+    background-color: #16794c;
+    /*#e4f5e9*/
+    color: #e4f5e9;
+    /*#16794c*/
+}
+
+.stepper-item.completed .step-name,
+.stepper-item.completed .step-date {
+    color: #16794c;
+    text-align: center;
+}
+
+/* Line BEFORE a completed step */
+.stepper-item.completed::before {
+    border-bottom: 2px solid #4bb543;
+}
+
+/* Keep the line AFTER completed step default */
+.stepper-item.completed::after {
+    border-bottom: 2px solid #ccc;
+}
+
+.stepper-item.rejected .step-counter {
+    background-color: #941f1f;
+    color: #fff0f0;
+}
+
+/* Line BEFORE an rejected step */
+.stepper-item.rejected::before {
+    border-bottom: 2px solid #941f1f;
+}
+
+/* Keep the line AFTER an rejected step default */
+.stepper-item.rejected::after {
+    border-bottom: 2px solid #ccc;
+}
+
+.stepper-item.rejected .step-name,
+.stepper-item.rejected .step-date {
+    color: #941f1f;
+}
+
+.stepper-item.current .step-counter {
+    background-color: #005ca3;
+    color: #edf6fd;
+}
+
+/* Line BEFORE an rejected step */
+.stepper-item.current::before {
+    border-bottom: 2px solid #005ca3;
+}
+
+/* Keep the line AFTER an rejected step default */
+.stepper-item.current::after {
+    border-bottom: 2px solid #ccc;
+}
+
+.stepper-item.current .step-name,
+.stepper-item.current .step-date {
+    color: #005ca3;
+}
+
+.step-name {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.stepper-item:first-child::before {
+    content: none;
+}
+
+.stepper-item:last-child::after {
+    content: none;
+}
+
+.indicator-pill.whitespace-nowrap {
+    display: none;
+    /* for only leave application*/
 }
