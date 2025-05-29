@@ -48,7 +48,6 @@ fixtures = [
             ]
         ],
     },
-    {"dt": "Print Format", "filters": [["doc_type", "in", ["Leave Application"]]]},
     {
         "dt": "Custom HTML Block",
         "filters": [["name", "in", ["Profile Nice", "Upcoming Holidays"]]],
