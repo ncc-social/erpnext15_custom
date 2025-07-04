@@ -22,7 +22,7 @@ class CustomEmployee(NestedSet):
 	def validate(self):
 		from erpnext.controllers.status_updater import validate_status
 
-		validate_status(self.status, ["Active", "Inactive", "Suspended", "Dismissed", "Recalled", "Resigned", "Retired"])
+		validate_status(self.status, ["Active", "Inactive", "Suspended", "Dismissed", "Recalled", "Left", "Resigned", "Retired", "Deceased"])
 
 		self.employee = self.name
 		self.set_employee_name()
