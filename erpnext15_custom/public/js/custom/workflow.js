@@ -187,8 +187,9 @@ class WorkflowOverride extends frappe.ui.form.States {
                                                 frappe.xcall("frappe.desk.form.utils.add_comment", {
                                                     reference_doctype: me.frm.doc.doctype,
                                                     reference_name: me.frm.doc.name,
-                                                    content: `Rejection Reason: ${values.reject_reason}`,
-                                                    comment_email: frappe.session.user
+                                                    content: values.reject_reason,
+                                                    comment_email: frappe.session.user,
+                                                    comment_by: frappe.session.user
                                                 });
 
                                                 frappe.model.sync(doc);
